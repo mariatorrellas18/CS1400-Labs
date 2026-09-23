@@ -34,7 +34,7 @@ else:
 # Fin del programa de evaluación de conducción
 
 #1. **¿Cuántos commits hiciste?**
-#   Hice varios commits durante la actividad para guardar los cambios que fui realizando en el proyecto.
+#   Hice varios commits durante la actividad para guardar los cambios que fui realizando en el proyecto. alrededor de 30 commits.
 
 #2. **¿Qué método te pareció más fácil de usar para guardar y subir tus cambios a GitHub: los comandos en la terminal o la interfaz visual de Visual Studio Code? ¿Por qué?**
 #   Me pareció más fácil usar la terminal de Visual Studio Code porque pude seguir los comandos paso a paso y entender mejor qué estaba haciendo Git en cada momento.
