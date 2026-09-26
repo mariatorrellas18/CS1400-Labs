@@ -34,4 +34,4 @@ elif es_valida:
     linea_alineada = linea.rjust(80)
     print(linea_alineada)
 else:
-    print("La línea no es válida.")
+    print("Error: No ingresaste ninguna línea.")
