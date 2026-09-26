@@ -31,6 +31,7 @@ else:
 if es_valida and len(linea) > 50:
     print("La línea es demasiado larga.")
 elif es_valida:
-    print("La línea tiene una longitud adecuada.")
+    linea_alineada = linea.rjust(80)
+    print(linea_alineada)
 else:
     print("La línea no es válida.")
