@@ -30,9 +30,7 @@ else:
 # y muestra un mensaje diferente si es demasiado larga.
 if es_valida and len(linea) > 50:
     print("La línea es demasiado larga.")
-    print("La línea tiene más de 50 caracteres.")
 elif es_valida:
-    print("La línea tiene menos de 50 caracteres.")
     print("La línea tiene una longitud adecuada.")
 else:
     print("La línea no es válida.")
