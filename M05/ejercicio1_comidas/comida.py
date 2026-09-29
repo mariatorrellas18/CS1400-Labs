@@ -26,7 +26,7 @@ comida = comida.lower()
 if comida == "tacos":
     print("Los tacos son típicos de México.")
 elif comida == "arepas":
-    print("Las arepas son típicas de Venezuela y Colombia.")
+    print("Las arepas son típicas de Venezuela.")
 elif comida == "ceviche":
     print("El ceviche es típico de Perú.")
 elif comida == "pupusas":
