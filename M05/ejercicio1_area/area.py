@@ -19,7 +19,7 @@ Uso de variables, importación de módulos, operadores booleanos y sentencias if
 import math
 
 # TODO Tarea 1: Declarar la variable 'radio_circulo' y asignarle el valor 5
-# 
+
 
 # TODO Tarea 2: Crea una variable booleana llamada 'radio_valido' usando un operador de comparación.
 # El radio debe ser mayor que 0 para ser válido.
@@ -28,7 +28,7 @@ radio_valido = False  # Reemplaza con tu código (ej: radio_circulo > 0)
 
 # TODO Tarea 3: Descomenta y completa la estructura if/else para calcular y mostrar el área solo si el radio es válido.
 # Si no es válido, imprime un mensaje de error. 
-# if ____________:
+# if 
 #     area = math.pi * (radio_circulo ** 2)
 #     print(f"El área del círculo es: {area}")
 # else:
