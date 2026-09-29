@@ -19,20 +19,20 @@ Uso de variables, importación de módulos, operadores booleanos y sentencias if
 import math
 
 # TODO Tarea 1: Declarar la variable 'radio_circulo' y asignarle el valor 5
-
+radio_circulo = 5
 
 # TODO Tarea 2: Crea una variable booleana llamada 'radio_valido' usando un operador de comparación.
 # El radio debe ser mayor que 0 para ser válido.
-radio_valido = False  # Reemplaza con tu código (ej: radio_circulo > 0)
+radio_valido = radio_circulo > 0  # Reemplaza con tu código (ej: radio_circulo > 0)
 
 
 # TODO Tarea 3: Descomenta y completa la estructura if/else para calcular y mostrar el área solo si el radio es válido.
 # Si no es válido, imprime un mensaje de error. 
-# if 
-#     area = math.pi * (radio_circulo ** 2)
-#     print(f"El área del círculo es: {area}")
-# else:
-#     print("Error: El radio debe ser mayor que cero.")
+if radio_valido:
+    area = math.pi * (radio_circulo ** 2)
+    print(f"El área del círculo es: {area}")
+else:
+    print("Error: El radio debe ser mayor que cero.")
 
 
 # Salida esperada (con radio = 5):
@@ -42,3 +42,11 @@ radio_valido = False  # Reemplaza con tu código (ej: radio_circulo > 0)
 # TODO Reto: Modifica la variable 'radio_circulo' para que sea el número ingresado por el usuario. 
 # (Usa la función input() y recuerda convertirlo con float() para aceptar decimales). Y asegúrate de que tu estructura final cumpla con 
 # todos los requisitos para que el script pase la prueba automática (pytest).
+radio_circulo = float(input("Ingresa el radio del círculo: "))
+radio_valido = radio_circulo > 0
+
+if radio_valido:
+    area = math.pi * (radio_circulo ** 2)
+    print(f"El área del círculo es: {area}")
+else:
+    print("Error: El radio debe ser mayor que cero.")
