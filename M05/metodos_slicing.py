@@ -1,3 +1,4 @@
+# Gabriela Torrellas 
 #Sección 1: Conteo Inverso con range()
 #Analizaremos cómo usar pasos negativos para contar hacia atrás.
 
