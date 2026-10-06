@@ -23,26 +23,22 @@ t.speed(3)         # Velocidad del dibujo (1 es lento, 10 es rápido)
 # =============================================================
 
 t.color("darkblue", "lightblue") 
- # (Color del borde, Color de relleno - los puedes ajustar si deseas -   TODO 5 los colores son parametros o argumentos?)
-
+ # (Color del borde, Color de relleno - los puedes ajustar si deseas -  
+ #  TODO 5 los colores son parametros o argumentos?)
 t.begin_fill()
 
-<<<<<<< HEAD
 # TODO 6 Este for loop que hace que?
 # R: Dibuja un cuadrado de 100 unidades de lado, girando 90 grados a la izquierda en cada iteración.
-=======
-# TODO 6 Este for loop que hace?
->>>>>>> f12c9f9d16941ce20abc7ceaea5e5f3de9fd4f76
 for _ in range(4):
-    t.forward(100)  # 
-    t.left(90)      # 
+    t.forward(100)  # Mueve la tortuga hacia adelante 100 unidades
+    t.left(90)      # Gira la tortuga 90 grados a la izquierda
 
-<<<<<<< HEAD
-# TODO 7 En que linea empezo el fill? o relleno?
-# R: En la linea 25 con t.begin_fill()
-=======
+
 # TODO 7 En que linea de codigo empezo el fill? o relleno?
->>>>>>> f12c9f9d16941ce20abc7ceaea5e5f3de9fd4f76
+# R: En la linea 27 con t.begin_fill()
+
+# TODO 8 En que linea de codigo termino el fill? o relleno?
+# R: En la linea 42 con t.end_fill()
 t.end_fill()
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
