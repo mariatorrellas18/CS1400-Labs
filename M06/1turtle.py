@@ -27,14 +27,22 @@ t.color("darkblue", "lightblue")
 
 t.begin_fill()
 
+<<<<<<< HEAD
 # TODO 6 Este for loop que hace que?
 # R: Dibuja un cuadrado de 100 unidades de lado, girando 90 grados a la izquierda en cada iteración.
+=======
+# TODO 6 Este for loop que hace?
+>>>>>>> f12c9f9d16941ce20abc7ceaea5e5f3de9fd4f76
 for _ in range(4):
     t.forward(100)  # 
     t.left(90)      # 
 
+<<<<<<< HEAD
 # TODO 7 En que linea empezo el fill? o relleno?
 # R: En la linea 25 con t.begin_fill()
+=======
+# TODO 7 En que linea de codigo empezo el fill? o relleno?
+>>>>>>> f12c9f9d16941ce20abc7ceaea5e5f3de9fd4f76
 t.end_fill()
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
