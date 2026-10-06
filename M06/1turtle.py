@@ -22,15 +22,20 @@ t.speed(3)         # Velocidad del dibujo (1 es lento, 10 es rápido)
 # EJEMPLO: Dibujar la base de la casa (un cuadrado azul)
 # =============================================================
 
-t.color("darkblue", "lightblue")  # (Color del borde, Color de relleno - los puedes ajustar si deseas - TODO 5 los colores son parametros o argumentos?)
+t.color("darkblue", "lightblue") 
+ # (Color del borde, Color de relleno - los puedes ajustar si deseas 
+ #   TODO 5 los colores son parametros o argumentos?)
+
 t.begin_fill()
 
 # TODO 6 Este for loop que hace que?
+# R: Dibuja un cuadrado de 100 unidades de lado, girando 90 grados a la izquierda en cada iteración.
 for _ in range(4):
     t.forward(100)  # 
     t.left(90)      # 
 
 # TODO 7 En que linea empezo el fill? o relleno?
+# R: En la linea 25 con t.begin_fill()
 t.end_fill()
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
