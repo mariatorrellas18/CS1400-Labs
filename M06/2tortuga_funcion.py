@@ -2,8 +2,8 @@
 ====================================================================
 Mi Primera Función en Turtle
 ====================================================================
-NOMBRE: 
-Objetivo:
+NOMBRE: Gabriela Torrellas
+Objetivo: Aprender a crear y utilizar funciones en Turtle para dibujar figuras geométricas.
 Entender cómo encapsular código en una función para reutilizarlo y 
 dibujar figuras personalizadas de manera sencilla.
 
@@ -79,18 +79,34 @@ dibujar_figura(lados=5, tamaño=60, color_borde="purple", color_relleno="plum")
 mover(150, 0)
 dibujar_figura(lados=6, tamaño=50, color_borde="darkblue", color_relleno="skyblue")
 
+# Dibujar un octágono (8 lados)
+mover(0, -150)
+dibujar_figura(lados=8, tamaño=40, color_borde="orange", color_relleno="yellow")
+
 
 # ==================================================================
 # 4. PREGUNTAS
 # ==================================================================
 """
 1.  ¿Cuantas funciones hay en este programa? Que proposito tienen? En tus propias palabras agrega comentario completo.
+# R: Hay dos funciones en este programa. La primera es 'dibujar_figura', que se encarga de dibujar cualquier polígono regular basado en el número de lados, tamaño y colores especificados. La segunda es 'mover', que permite mover la tortuga a una posición específica en la pantalla sin dibujar.
 
 2. ¿Qué parámetro de la función 'dibujar_figura' tendrías que cambiar para hacer un octágono (8 lados)?
+# R: El parámetro 'lados' debería cambiarse a 8.
 
 3 ¿En que numero de linea termina la funcion mover?
+# R: La función 'mover' termina en la línea 62.
 
 4. Bajo la seccion de pruebas, intenta hacer una nueva figura sin el uso de la funcion dibujar_figura.
+# R: Se puede dibujar un cuadrado manualmente usando t.forward() y t.left() cuatro veces, por ejemplo:
+#
+# mover(-150, -150)
+# t.color("red", "pink")
+# t.begin_fill()
+# for _ in range(4):
+#     t.forward(80)
+#     t.left(90)
+# t.end_fill()
 
 5. Guarda una captura de pantalla con las 4 figuras en la carpeta M06.
       
