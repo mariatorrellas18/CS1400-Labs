@@ -79,9 +79,13 @@ dibujar_figura(lados=5, tamaño=60, color_borde="purple", color_relleno="plum")
 mover(150, 0)
 dibujar_figura(lados=6, tamaño=50, color_borde="darkblue", color_relleno="skyblue")
 
-# Dibujar un octágono (8 lados)
-mover(0, -150)
-dibujar_figura(lados=8, tamaño=40, color_borde="orange", color_relleno="yellow")
+mover(-150, -150)
+t.color("red", "pink")
+t.begin_fill()
+for _ in range(4):
+    t.forward(80)
+    t.left(90)
+t.end_fill()
 
 
 # ==================================================================
