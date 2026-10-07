@@ -31,12 +31,20 @@ import turtle
 #  Iniciar ventana y objeto de tortuga y agregar el speed o velocidad. Pista: Mira la Tarea 1turtle.py
 
 # Escribe aquí tu código
+pantalla = turtle.Screen()
+pantalla.bgcolor("lightyellow")
+pantalla.title("Tortuguita Casa")
+
+t = turtle.Turtle()
+t.shape("turtle")
+t.speed(3)  
 
 # TODO 2
 #  Crea la tortuga usando make_turtle().
 #  La ventana debe tener 400 de alto y 400 de ancho.
 
 # Escribe aquí tu código
+pantalla.setup(width=400, height=400)
 
 # Captura de Pantalla, nombralo "TUNOMBRE_1_2" y guardalo en la carpeta M06
 
@@ -49,7 +57,7 @@ import turtle
 # Observa qué sucede.
 
 # Escribe aquí tu código
-
+t.forward(100)
 
 # ------------------------------------------
 # Girar la tortuga
@@ -59,7 +67,8 @@ import turtle
 # Gira la tortuga 90 grados hacia la izquierda.
 # Luego avanza otros 100 pasos.
 
-# Escribe aquí tu código
+t.left(90)
+t.forward(100)
 
 
 # ------------------------------------------
@@ -77,7 +86,14 @@ print("Dibujando un cuadrado...")
 # Debes usar forward() y left() varias veces.
 # La tortuga debe terminar donde empezó.
 
-# Escribe aquí tu código
+t.forward(100)
+t.left(90)
+t.forward(100)
+t.left(90)
+t.forward(100)
+t.left(90)
+t.forward(100)
+t.left(90)
 
 
 # ------------------------------------------
@@ -90,6 +106,23 @@ print("Dibujando un cuadrado...")
 # - Un giro completo es 360 grados.
 # - ¿Cuánto debe girar en cada esquina?
 
+# Dibujar un triángulo
+t.forward(100)
+t.left(120)
+t.forward(100)
+t.left(120)
+t.forward(100)
+t.left(120)
+
+# Dibujar un rectángulo
+t.forward(150)
+t.left(90)
+t.forward(100)
+t.left(90)
+t.forward(150)
+t.left(90)
+t.forward(100)
+t.left(90)
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
 pantalla.exitonclick()
