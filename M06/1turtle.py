@@ -6,7 +6,7 @@ import turtle
 
 # Configuración de la pantalla y la tortuga
 pantalla = turtle.Screen() # # Usamos sintaxis de punto . para acceder a la función Screen()
-pantalla.bgcolor("lightcyan")  # TODO 2 Cambia el color de fondo usando la función bgcolor()
+pantalla.bgcolor("darkgrey")  # TODO 2 Cambia el color de fondo usando la función bgcolor()
 pantalla.title("Titulo") #TODO 3 Asigna un título a la ventana usando title()
 
 # Corre el programa hasta este punto utilizando """ """ o # para asegurar que funcione bien.
@@ -22,7 +22,7 @@ t.speed(3)         # Velocidad del dibujo (1 es lento, 10 es rápido)
 # EJEMPLO: Dibujar la base de la casa (un cuadrado azul)
 # =============================================================
 
-t.color("darkgreen", "lightblue") 
+t.color("darkblue", "lightblue") 
  # (Color del borde, Color de relleno - los puedes ajustar si deseas -  
  #  TODO 5 los colores son parametros o argumentos?)
 t.begin_fill()
