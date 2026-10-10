@@ -32,9 +32,10 @@ def lanzar_dado():
     #Guardalo en una variable llamada 'resultado'.
     resultado = random.randint(1, 6)
     # TODO: Paso 3. Devuelve el resultado.
-    return resultado  # Reemplaza esto con la variable que contiene el resultado
-  # Reemplaza esto con la variable que contiene el resultado
+    # Reemplaza esto con la variable que contiene el resultado
+    return resultado  
 
+  
 
 # --- Bloque para probar tu función ---
 # Este código es para que pruebes tu función.
