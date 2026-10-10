@@ -37,7 +37,7 @@ pantalla.title("Tortuguita Casa")
 
 t = turtle.Turtle()
 t.shape("turtle")
-t.speed(3)  
+t.speed(3) 
 
 # TODO 2
 #  Crea la tortuga usando make_turtle().
@@ -56,9 +56,11 @@ pantalla.setup(width=400, height=400)
 # Mueve la tortuga hacia adelante 100 pasos.
 # Observa qué sucede.
 
-# Escribe aquí tu código
-t.forward(100)
 
+t.fillcolor("lightblue")
+t.begin_fill()
+
+t.forward(100)
 # ------------------------------------------
 # Girar la tortuga
 # ------------------------------------------
@@ -86,14 +88,16 @@ print("Dibujando un cuadrado...")
 # Debes usar forward() y left() varias veces.
 # La tortuga debe terminar donde empezó.
 
-t.forward(100)
 t.left(90)
 t.forward(100)
 t.left(90)
 t.forward(100)
 t.left(90)
-t.forward(100)
-t.left(90)
+t.fillcolor("lightblue")
+
+t.end_fill()
+
+print("Cuadrado terminado")
 
 
 # ------------------------------------------
@@ -106,23 +110,68 @@ t.left(90)
 # - Un giro completo es 360 grados.
 # - ¿Cuánto debe girar en cada esquina?
 
-# Dibujar un triángulo
-t.forward(100)
-t.left(120)
-t.forward(100)
-t.left(120)
-t.forward(100)
-t.left(120)
+# Dibujar el techo de la casa
+# Dibujar el techo de la casa
+print("Comenzando el techo")
 
-# Dibujar un rectángulo
-t.forward(150)
-t.left(90)
+t.penup()
+t.goto(0, 100)
+t.setheading(0)
+t.pendown()
+
+t.fillcolor("#FFDAB9")
+t.begin_fill()
+
+t.left(60)
 t.forward(100)
-t.left(90)
-t.forward(150)
-t.left(90)
+t.right(120)
 t.forward(100)
-t.left(90)
+t.right(120)
+t.forward(100)
+
+t.end_fill()
+
+print("Techo terminado")
+
+
+# Dibujar una puerta
+t.penup()
+t.goto(35, 0)
+t.setheading(90)
+t.pendown()
+# Pintar la puerta de amarillo claro
+t.fillcolor("lightyellow")
+t.begin_fill()
+
+t.forward(50)
+t.right(90)
+t.forward(30)
+t.right(90)
+t.forward(50)
+t.end_fill()
+
+# Dibujar la ventana izquierda
+t.penup()
+t.goto(10, 60)
+t.setheading(0)
+t.pendown()
+
+for i in range(4):
+    t.forward(20)
+    t.left(90)
+
+
+# Dibujar la ventana derecha
+t.penup()
+t.goto(70, 60)
+t.setheading(0)
+t.pendown()
+for i in range(4):
+    t.forward(20)
+    t.left(90)
+
+print("¡La casa se dibujó completamente!")
+pantalla.mainloop()
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
 pantalla.exitonclick()
