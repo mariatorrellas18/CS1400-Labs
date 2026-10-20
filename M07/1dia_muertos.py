@@ -13,6 +13,18 @@ NIVELES_ALTAR = ("Cielo", "Tierra", "Inframundo")
 
 # Mostrar la segunda ofrenda (índice 1)
 print("Segunda ofrenda:", ofrendas[1])
+ofrendas.append("Incienso copal")
+ofrendas.sort()
+print(ofrendas)
+# La lista ahora tiene un elemento nuevo y está ordenada
+# alfabéticamente. Las posiciones de algunos elementos cambian.
+
+#NIVELES_ALTAR[0] = "Gloria"
+# Aparece un TypeError porque las tuplas son inmutables
+# y no permiten modificar sus elementos.
+
+for posicion, ofrenda in enumerate(ofrendas, start=1):
+    print(posicion, ofrenda)
 
 """
 Ejecuta el código. Observa qué elemento se imprime al pedir el índice 1.
