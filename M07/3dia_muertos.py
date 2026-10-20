@@ -24,3 +24,20 @@ print("Palabras largas (Tradicional):", largas_tradicional)
 #11. Pregunta de análisis: ¿Qué ventaja ofrece escribir la solución con comprensiones
  en lugar de usar un bucle for tradicional con un .append()?
 """
+
+# Respuesta 8
+largas_comprehension = [elemento for elemento in calaveritas if len(elemento) > 7]
+print("Palabras largas (Comprehension):", largas_comprehension)
+
+# Respuesta 9
+calaveritas_mayusculas = [elemento.upper() for elemento in calaveritas]
+print("Calaveritas en mayúsculas:", calaveritas_mayusculas)
+
+# Respuesta 10
+conteo_letras = {elemento: len(elemento) for elemento in calaveritas}
+print("Cantidad de letras:", conteo_letras)
+
+# Respuesta 11
+# La comprensión de listas permite escribir el código
+# de una forma más corta, sencilla y fácil de leer.
+# También evita usar varias líneas con for y append().
