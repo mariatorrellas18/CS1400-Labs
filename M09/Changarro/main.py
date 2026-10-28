@@ -10,7 +10,7 @@ def mostrar_menu():
     # TODO #1 Completa el menú de opciones imprimiendo un mensaje y las opciones.
     
 
-def ejecutar_programa():
+ def ejecutar_programa():
     # TODO #2 iniciar un diccionario vacio
     
     
