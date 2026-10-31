@@ -1,7 +1,7 @@
 """
 TAREA M09: Cazando errores en Macondo
 Herramienta: el depurador (debugger) de VS Code
-Nombre:
+Nombre: Gabriela Torrellas
 
 En esta tarea el código tiene errores (bugs) escondidos. Tu trabajo NO es
 adivinar: es usar el depurador para ENCONTRAR la causa de cada error, explicarla
@@ -118,8 +118,11 @@ def nombre_mas_largo(lista):
 #  - En cada vuelta observa en VARIABLES: nombre y mas_largo.
 
 # TODO 1. ¿Cuántas veces cambió el valor de mas_largo durante el ciclo?
+# Respuesta 1: Cambió 1 vez, al guardar "José Arcadio Buendía".
 # TODO 2. ¿Cuál es el valor de len(nombre) en la tercera vuelta? (míralo en WATCH)
+# Respuesta 2: 17, porque "Aureliano Buendía" tiene 17 caracteres.
 # TODO 3. ¿Qué hace el botón Step Over comparado con Step Into?
+# Respuesta 3: Step Over ejecuta la línea sin entrar en las funciones; Step Into entra en la función llamada.
 
 
 # =====================================================================
@@ -128,14 +131,17 @@ def nombre_mas_largo(lista):
 # =====================================================================
 
 def ultimo_personaje(lista):
-    posicion = len(lista)
+    posicion = len(lista) - 1
     return lista[posicion]
 
 
 # TODO
 # 4. Error o resultado incorrecto obtenido:
+# Respuesta 4: IndexError: list index out of range.
 # 5. Valor de posicion y de len(lista) en el depurador:
+# Respuesta 5: posicion = 5 y len(lista) = 5. El último índice válido es 4.
 # 6. Cómo lo corregí:
+# Respuesta 6: Resté 1 a len(lista) para acceder al último elemento.
 
 
 # =====================================================================
@@ -145,7 +151,7 @@ def ultimo_personaje(lista):
 # =====================================================================
 
 def describir(nombre):
-    return nombre + ": " + rasgos[nombre.lower()]
+    return nombre + ": " + rasgos[nombre]
 
 
 # Pista del método: en WATCH escribe nombre.lower() y compáralo con las
@@ -153,8 +159,11 @@ def describir(nombre):
 #
 # 
 # 7. Error o resultado incorrecto obtenido:
+# Respuesta 7: KeyError al intentar consultar "melquíades".
 # 8. Valor de nombre.lower() y por qué no se encuentra en el diccionario:
+# Respuesta 8: nombre.lower() = "melquíades"; la llave es "Melquíades" y Python distingue mayúsculas.
 # 9. Cómo lo corregí:
+# Respuesta 9: Usé rasgos[nombre] sin convertir el nombre a minúsculas.
 
 
 # =====================================================================
@@ -164,7 +173,7 @@ def describir(nombre):
 
 def contar_aurelianos(lista):
     contador = 0
-    for i in range(1, len(lista)):
+    for i in range(0, len(lista)):
         if lista[i].startswith("Aureliano"):
             contador += 1
     return contador
@@ -175,8 +184,11 @@ def contar_aurelianos(lista):
 # toma la variable i en cada vuelta.
 #
 # 10. Error o resultado incorrecto obtenido (¿qué número esperaba y cuál obtuve?):
+# Respuesta 10: Esperaba 4 y obtenía 3.
 # 11. Primer valor de i en el depurador y qué elemento se saltó:
+# Respuesta 11: i comenzaba en 1 y se saltaba "Aureliano José" (índice 0).
 # 12. Cómo lo corregí:
+# Respuesta 12: Cambié range(1, len(lista)) por range(0, len(lista)).
 
 
 # =====================================================================
@@ -188,7 +200,7 @@ def contar_aurelianos(lista):
 # =====================================================================
 
 def dias_de_insomnio(habitantes):
-    olvidados = 0
+    olvidados = 1
     dias = 0
     while olvidados < habitantes:
         olvidados = olvidados * 2
@@ -203,8 +215,11 @@ def dias_de_insomnio(habitantes):
 # Presiona F10 varias veces y mira el panel VARIABLES.
 #
 # 13. ¿Qué valor tenía olvidados después de 5 vueltas?
+# Respuesta 13: Seguía en 0 después de 5 vueltas.
 # 14. ¿Por qué nunca se cumple la condición del while?
+# Respuesta 14: Al multiplicar 0 por 2 siempre da 0; por eso nunca alcanza los 100 habitantes.
 # 15. Cómo lo corregí:
+# Respuesta 15: Cambié olvidados = 0 por olvidados = 1 para que pueda duplicarse.
 
 
 # =====================================================================
@@ -217,7 +232,7 @@ def dias_de_insomnio(habitantes):
 def etapa_de_vida(edad):
     if edad < 12:
         return "niño"
-    if edad >= 12 or edad < 18:
+    if edad >= 12 and edad < 18:
         return "adolescente"
     if edad >= 18 and edad < 60:
         return "adulto"
@@ -228,8 +243,11 @@ def etapa_de_vida(edad):
 #
 
 # 16. Error o resultado incorrecto obtenido:
+# Respuesta 16: Con edad = 30 devolvía "adolescente" en lugar de "adulto".
 # 17. ¿Qué línea se ejecutó que NO debía ejecutarse con edad = 30?
+# Respuesta 17: Se ejecutó return "adolescente" porque la condición con or era verdadera.
 # 18. Cómo lo corregí:
+# Respuesta 18: Reemplacé or por and para comprobar que la edad esté entre 12 y 17.
 
 
 # =====================================================================
@@ -240,14 +258,17 @@ def etapa_de_vida(edad):
 # =====================================================================
 
 def dias_de_lluvia(anios, meses, dias):
-    return anios * 365 + meses * 30 * dias
+    return anios * 365 + meses * 30 + dias
 
 
 # Usa WATCH para evaluar por separado:  anios * 365   y   meses * 30 * dias
 #
 # 19. Error o resultado incorrecto obtenido:
+# Respuesta 19: Devolvía 2120 en vez de 1792 días.
 # 20. Valor de cada parte de la suma en WATCH:
+# Respuesta 20: anios * 365 = 1460 y meses * 30 * dias = 660.
 # 21. Cómo lo corregí:
+# Respuesta 21: Sumé los días al final: anios * 365 + meses * 30 + dias.
 
 
 # =====================================================================
@@ -259,7 +280,7 @@ def promedio_de_soledad(edades):
     total = 0
     for edad in edades:
         total += edad
-    print(total / len(edades))
+    return total / len(edades)
 
 
 def es_longevo(edades):
@@ -275,8 +296,11 @@ def es_longevo(edades):
 #
 # 
 # 22. Error o resultado incorrecto obtenido:
+# Respuesta 22: TypeError al comparar None > 50.
 # 23. Valor de promedio dentro de es_longevo y por qué tiene ese valor:
+# Respuesta 23: promedio = None porque promedio_de_soledad imprimía el promedio pero no lo retornaba.
 # 24. Cómo lo corregí:
+# Respuesta 24: Cambié print(total / len(edades)) por return total / len(edades).
 
 
 # =====================================================================
@@ -295,28 +319,36 @@ def generacion_mas_numerosa(gens):
         miembros = gens[numero]
         if len(miembros) > mayor:
             mayor = len(miembros)
-        ganadora = numero
+            ganadora = numero
     return ganadora
 
 
 def total_personajes(gens):
     total = 0
     for numero in gens:
-        total = len(gens[numero])
+        total += len(gens[numero])
     return total
 
 
 # TODO (para cada una de las dos funciones):
 # 25. Error o resultado incorrecto obtenido:
+# Respuesta 25 (generacion_mas_numerosa): Devolvía 7 en lugar de 2.
+# Respuesta 25 (total_personajes): Devolvía 1 en lugar de 16.
 # 26. Variable que me dio la pista y su valor:
+# Respuesta 26 (generacion_mas_numerosa): ganadora terminaba con valor 7, aunque mayor era 4.
+# Respuesta 26 (total_personajes): total terminaba con valor 1, solo el tamaño de la última generación.
 # 27. Cómo lo corregí:
+# Respuesta 27 (generacion_mas_numerosa): Indenté ganadora = numero dentro del if.
+# Respuesta 27 (total_personajes): Cambié total = len(...) por total += len(...).
 
 
 # =====================================================================
 # REFLEXIÓN FINAL
 # 28. ¿Cuál error fue el más difícil de encontrar y por qué?
+# Respuesta 28: El ejercicio 3, porque el programa no fallaba, pero contaba menos nombres al saltar el índice 0.
 # 29. ¿Cuál herramienta del depurador te ayudó más
 #   (Variables, Watch, Step Into, Call Stack)?
+# Respuesta 29: Variables, porque permite observar cómo cambian los valores y detectar resultados inesperados.
 # 
 # =====================================================================
 
