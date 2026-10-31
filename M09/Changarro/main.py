@@ -1,3 +1,4 @@
+
 # main.py
 # Este es el programa principal para gestionar la tienda.
 # Los nombres de las funciones deben concoradr con los siguientes:
@@ -8,10 +9,16 @@ def mostrar_menu():
     # El usuario puede elegir entre ver el inventario, agregar un producto, buscar un precio o salir.
     # El programa seguirá ejecutándose hasta que el usuario elija salir.
     # TODO #1 Completa el menú de opciones imprimiendo un mensaje y las opciones.
+    print("--- MENÚ DE LA TIENDITA ---")
+    print("1. Ver productos")
+    print("2. Agregar/Actualizar producto")
+    print("3. Buscar precio")
+    print("4. Salir")
     
 
- def ejecutar_programa():
+def ejecutar_programa():
     # TODO #2 iniciar un diccionario vacio
+    mi_inventario = {}
     
     
     while True:

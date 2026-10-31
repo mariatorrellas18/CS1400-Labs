@@ -1,3 +1,4 @@
+
 # gestion_tienda.py
 
 # Este módulo contiene las funciones para gestionar el inventario de la tienda.
@@ -12,7 +13,11 @@
 
 def agregar_producto(inventario, nombre, precio):
     """
-   
+    Esta función agrega un producto al inventario.
+    Recibe el inventario, el nombre y el precio del producto.
+    Convierte el precio a float para asegurarse de que sea un número.
+    Si el producto ya existe, actualiza su precio.
+    Si el precio no es válido, devuelve False usando try/except.
     """
     try:
         # Convertimos a float para asegurar que sea un número
@@ -25,13 +30,22 @@ def agregar_producto(inventario, nombre, precio):
 
 def buscar_precio(inventario, nombre):
     """
+    Esta función busca el precio de un producto en el inventario.
+    Recibe el diccionario y el nombre del producto.
+    Utiliza .get() para buscar el precio.
+    Si encuentra el producto, devuelve su precio.
+    Si no existe, devuelve None.
     """
     # Usamos .get() para evitar que el programa falle si la llave no existe
     return inventario.get(nombre, None)
 
 def listar_productos(inventario):
     """
-   
+    Esta función muestra todos los productos del inventario.
+    Primero verifica si el diccionario está vacío.
+    Si está vacío, muestra un mensaje al usuario.
+    Si tiene productos, utiliza un ciclo for para recorrerlos
+    y mostrar el nombre y el precio de cada producto.
     """
     if not inventario:
         print("\n> El inventario está vacío.")
